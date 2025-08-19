@@ -6,4 +6,3 @@ b = x+y
 print (a)
 print (b)
 
-
