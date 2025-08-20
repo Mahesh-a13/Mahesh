@@ -1,0 +1,19 @@
+name: column
+
+on: 
+  push:
+    branches:
+      - master
+
+jobs:
+  job1:
+    runs-on: ubuntu:latest
+    env:
+      maheshsecret: ${{secrets.MAHESHSECRET}}
+      design: "18"
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v4
+
+      - name: seeing variables
+        run: echo "${{ env.maheshsecret }} and design is ${{ env.design }}"
